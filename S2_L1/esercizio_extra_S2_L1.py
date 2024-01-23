@@ -1,17 +1,18 @@
-# Esercizio 1
-"""
-Scrivi una funzione che prenda una serie di input dall'utente utilizzando un ciclo while e li stampi 
-con la funzione print senza andare a capo. 
-Il ciclo while si deve interrompere quando l'utente preme INVIO senza scrivere nulla.
-"""
-parola_senza_andare_a_capo = ""
+# METODO 2
 
-while True:
-    parola_inserita = input("Inserire una parola, premere q o Q per terminare il programma --> ")
-    if parola_inserita ==  "Q" or parola_inserita == "q":
-        break
-    else:
-        parola_senza_andare_a_capo = parola_senza_andare_a_capo + " " + parola_inserita
-        continue
+import inflect                            # trascrive da numero a lettere in lingua inglese 
+from googletrans import Translator        # traduce da lingua inglese a lingua italiana
 
-print(parola_senza_andare_a_capo)
+n = int(input("Inserisci un numero --> "))
+
+def traduci_numero(n):
+    
+    p = inflect.engine()
+    word = p.number_to_words(n)
+    
+
+    translator = Translator()
+    translation = translator.translate(str(word), src='en', dest='it')
+    return translation.text
+
+print(f"{n} in italiano: {traduci_numero(n)}")
