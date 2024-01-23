@@ -5,14 +5,17 @@
 
 # METODO 1
 
+# Chiedi all'utente di inserire un numero
+user_input = int(input("Inserisci un numero da 1 a 10000: "))
+
 def translate_to_20(n):
     if n > 19:
         return "Out of range"
 
     NUMBERS = ["", "uno", "due", "tre", "quattro", "cinque", "sei", "sette",
-               "otto", "nove", "dieci", "undici", "dodici", "tredici",
-               "quattordici", "quindici", "sedici", "diciassette",
-               "diciotto", "diciannove"]
+            "otto", "nove", "dieci", "undici", "dodici", "tredici",
+            "quattordici", "quindici", "sedici", "diciassette",
+            "diciotto", "diciannove"]
     return NUMBERS[n]
 
 def translate_to_100(n):
@@ -67,9 +70,6 @@ def translate_number(n):
             return translate_to_20(thousands) + "mila"
         else:
             return translate_to_20(thousands) + "mila" + translate_to_1000(remainder)
-
-# Chiedi all'utente di inserire un numero
-user_input = int(input("Inserisci un numero da 1 a 10000: "))
-
-# Stampa solo il numero dato dall'utente
+                
+#Stampa solo il numero dato dall'utente
 print(translate_number(user_input))
