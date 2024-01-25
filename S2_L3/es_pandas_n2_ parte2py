@@ -1,0 +1,20 @@
+# Esercizio " (2/2)
+'''
+Dal dataset di prima: 
+• Leggiamo il file e carichiamolo in un DataFrame, 
+aggiungendo i nomi di colonna — che si trovano nel file .names — come parametro di pd.read_csv() 
+• Stampiamo le prime cinque righe e le ultime dieci 
+• Stampiamo un riepilogo dei descrittori statistici del dataset
+'''
+
+import pandas as pd
+iris = pd.read_csv("Dataset/iris/iris.data", header=None)
+
+nuovi_nomi_colonna = ['sepal length in cm', 'sepal width in cm', 'petal length in cm', 'petal width in cm', 'class']
+iris = iris.set_axis(nuovi_nomi_colonna, axis=1) # Cambia l'indice delle colonne nel DataFrame axis = 1 (colonna) axis = 0 (riga)
+
+print(iris)
+print(iris.head())
+print(iris.tail(10))
+print(round(iris.describe(), 3))
+
