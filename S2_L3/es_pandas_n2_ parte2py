@@ -13,6 +13,9 @@ iris = pd.read_csv("Dataset/iris/iris.data", header=None)
 nuovi_nomi_colonna = ['sepal length in cm', 'sepal width in cm', 'petal length in cm', 'petal width in cm', 'class']
 iris = iris.set_axis(nuovi_nomi_colonna, axis=1) # Cambia l'indice delle colonne nel DataFrame axis = 1 (colonna) axis = 0 (riga)
 
+print(f"Esempio di loc \n {iris.loc[2:4]} ")
+print(f"Esempio di iloc \n {iris.iloc[:6]} ")
+
 print(iris)
 print(iris.head())
 print(iris.tail(10))
