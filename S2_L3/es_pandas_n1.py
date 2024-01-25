@@ -17,6 +17,17 @@ print(vini)
 pd.set_option('display.max_columns', None) #SERVE PER VISUALIZZARE TUTTE LE COLONNE SENZA CHE VENGANO TRONCATE
 print(np.round(vini.describe(), 3))
 
+# Seleziona solo le colonne numeriche nel DataFrame
+colonne_numeriche = vini.select_dtypes(include='number')
+
+# Calcola la moda delle colonne numeriche
+moda_colonne_numeriche = colonne_numeriche.mode().iloc[0]  # Prende solo il primo valore (la moda)
+
+# Visualizza la moda per ogni colonna numerica
+print("\nModa delle colonne numeriche:")
+print(np.round(moda_colonne_numeriche, 2))
+
+
 
 
 
