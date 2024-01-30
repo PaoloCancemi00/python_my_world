@@ -1,0 +1,12 @@
+DESCRIZIONE DEL PROGETTO SVOLTO: 
+
+NELLA CARTELLA ProgettoPython_S6_L5 sono presenti 3 file oltre questo:
+
+1) ds_salaries.csv: è il file dal quale viene ricavato il dataset in analisi. 
+
+2) S6_L5_progetto.ipynb: è il lavoro svolto in gruppo nelle 7 ore del corso. 
+
+3) S6_L5_progetto_extra.py : è uno script creato da me, post corso, che presenta una riscrittura di alcune delle istruzioni in python poste 
+
+ nel progetto S6_L5_progetto.ipynb tramite la programmazione funzionale.
+
